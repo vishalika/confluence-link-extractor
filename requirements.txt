@@ -1,0 +1,4 @@
+streamlit
+requests
+pandas
+openpyxl # Required for pd.ExcelWriter(engine='openpyxl')

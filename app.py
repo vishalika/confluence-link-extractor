@@ -7,10 +7,30 @@ st.set_page_config(page_title="Confluence Page Link Extractor", layout="centered
 st.title("🔗 Confluence Page Link Extractor")
 
 # User inputs
-base_url = st.text_input("Confluence Base URL")
-space_key = st.text_input("Space Key")
-email = st.text_input("Email")
-api_token = st.text_input("API Token", type="password")
+
+base_url = st.text_input(
+    "Confluence Base URL",
+    placeholder="e.g., https://yourcompany.atlassian.net/wiki",
+    help="Enter the base URL of your Confluence instance. It usually ends with /wiki."
+)
+
+space_key = st.text_input(
+    "Confluence Space Key",
+    placeholder="e.g., ENG, HR, TSSG",
+    help="Enter the key of the Confluence space you want to extract page links from."
+)
+
+email = st.text_input(
+    "Atlassian Email",
+    placeholder="your.email@company.com",
+    help="Enter the email associated with your Atlassian account."
+)
+
+api_token = st.text_input(
+    "API Token",
+    type="password",
+    help="Generate your API token from https://id.atlassian.com/manage-profile/security/api-tokens"
+)
 
 if st.button("Fetch Page Links"):
     if not all([base_url, space_key, email, api_token]):

@@ -27,3 +27,48 @@ This app helps users from any organization retrieve a list of Confluence page UR
    git clone https://github.com/your-username/confluence-link-extractor.git
    cd confluence-link-extractor
    ```
+
+2. Create a virtual environment (optional but recommended):
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the app:
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+## 🧑‍💻 Usage
+
+1. Enter your Confluence base URL (e.g., `https://yourcompany.atlassian.net/wiki`)
+2. Enter the space key (e.g., `ENG`, `HR`, `TSSG`)
+3. Provide your Atlassian email and API token
+4. Click **Fetch Page Links**
+5. View the results and download them as an Excel file
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Streamlit
+- Pandas
+- Requests
+- OpenPyXL
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+```
+
+---
